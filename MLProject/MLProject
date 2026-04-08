@@ -1,0 +1,17 @@
+name: RandomForest_ChurnPrediction
+
+conda_env: conda.yaml
+
+entry_points:
+  train:
+    command: "python modelling.py"
+    parameters:
+      n_estimators:
+        type: int
+        default: 250
+      max_depth:
+        type: int
+        default: 20
+      random_state:
+        type: int
+        default: 42
